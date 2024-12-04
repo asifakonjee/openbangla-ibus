@@ -74,7 +74,7 @@ if(OS_LINUX)
 
     option(ENABLE_IBUS "Enable IBus support" OFF)
     option(ENABLE_FCITX "Enable Fcitx support" OFF)
-    set(ENABLE_FCITX ON)
+    set(ENABLE_FCITX OFF)
     set(ENABLE_IBUS ON)
 
     if((NOT ENABLE_IBUS) AND (NOT ENABLE_FCITX))

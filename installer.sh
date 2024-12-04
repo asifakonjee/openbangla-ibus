@@ -89,8 +89,10 @@ case "$pkg" in
         ;;
     apt)
         sudo apt-get install build-essential rustc cargo cmake libibus-1.0-dev qtbase5-dev qtbase5-dev-tools libzstd-dev git
+        ;;
     eopkg)
         sudo eopkg install -c system.devel rust qt5-base-devel ibus-devel zstd-devel git
+        ;;
     xbps-install)
         sudo xbps-install -y base-devel make cmake rust cargo qt5-declarative-devel libzstd-devel qt5-devel git ibus ibus-devel 
         ;;
