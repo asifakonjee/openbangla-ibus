@@ -64,6 +64,8 @@ elif command -v apt &> /dev/null; then
     pkg="apt"
 elif command -v eopkg &> /dev/null; then
     pkg="eopkg"
+elif command -v apk &> /dev/null; then
+    pkg="apk"
 else
     echo "No supported package manager found!"
     exit 1
@@ -95,6 +97,9 @@ case "$pkg" in
         ;;
     xbps-install)
         sudo xbps-install -y base-devel make cmake rust cargo qt5-declarative-devel libzstd-devel qt5-devel git ibus ibus-devel 
+        ;;
+    apk)
+        sudo apk add git cmake build-base gcc g++ rust cargo ibus-dev gettext-dev qt5-qtbase-dev qt5-qttools-dev qt5-qtdeclarative-dev 
         ;;
     *)
         echo "Unsupported package manager: $pkg"
